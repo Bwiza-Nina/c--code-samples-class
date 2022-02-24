@@ -19,6 +19,7 @@ int main(){
 	numbers.push(7);
 	numbers.push(9);
 	numbers.push(11);
+	numbers.push(11);
 	
 	cout << "Priority Queue: " << endl;
 	display_priority_queue(numbers);
@@ -26,5 +27,8 @@ int main(){
 	numbers.pop();
 	cout << "Priority Queue after deleting the element: " << endl;
 	display_priority_queue(numbers);
+	
+	int top = numbers.top();
+	cout << "The element at the top is: " << top << endl;
 	return 0;
 }
