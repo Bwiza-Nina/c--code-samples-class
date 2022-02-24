@@ -2,7 +2,7 @@
 #include <queue>
 using namespace std;
 
-void display_priority_queue(priority_queue<int> pq){
+void display_priority_queue(priority_queue<string> pq){
 	while(!pq.empty()){
 		cout << pq.top() << "," << endl;
 		pq.pop();
@@ -11,24 +11,27 @@ void display_priority_queue(priority_queue<int> pq){
 }
 
 int main(){
-	priority_queue<int> numbers;
+	priority_queue<string> programmingLanguages;
 	
-	numbers.push(1);
-	numbers.push(3);
-	numbers.push(5);
-	numbers.push(7);
-	numbers.push(9);
-	numbers.push(11);
-	numbers.push(11);
+	programmingLanguages.push("Java");
+	programmingLanguages.push("C++");
+	programmingLanguages.push("Python");
+	programmingLanguages.push("PHP");
+	programmingLanguages.push("JavaScript");
+	programmingLanguages.push("C");
+	programmingLanguages.push("Swift");
 	
 	cout << "Priority Queue: " << endl;
-	display_priority_queue(numbers);
+	display_priority_queue(programmingLanguages);
 	
-	numbers.pop();
+	programmingLanguages.pop();
 	cout << "Priority Queue after deleting the element: " << endl;
-	display_priority_queue(numbers);
+	display_priority_queue(programmingLanguages);
 	
-	int top = numbers.top();
+	string top = programmingLanguages.top();
 	cout << "The element at the top is: " << top << endl;
+	
+	int size = programmingLanguages.size();
+	cout << "The size of the queue is: " << size << endl;
 	return 0;
 }
