@@ -2,6 +2,14 @@
 #include <queue>
 using namespace std;
 
+void display_priority_queue(priority_queue<int> pq){
+	while(!pq.empty()){
+		cout << pq.top() << "," << endl;
+		pq.pop();
+	}
+	cout << endl;
+}
+
 int main(){
 	priority_queue<int> numbers;
 	
@@ -13,11 +21,10 @@ int main(){
 	numbers.push(11);
 	
 	cout << "Priority Queue: " << endl;
+	display_priority_queue(numbers);
 	
-	while(!numbers.empty()){
-		cout << numbers.top() << ", ";
-		numbers.pop();
-	}
-	cout << endl;
+	numbers.pop();
+	cout << "Priority Queue after deleting the element: " << endl;
+	display_priority_queue(numbers);
 	return 0;
 }
